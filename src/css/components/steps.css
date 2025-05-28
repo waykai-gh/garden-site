@@ -1,0 +1,49 @@
+.steps-container {
+    position: relative;
+    width: 100%;
+    min-height: 120vh; /* Чтобы вместить все шаги */
+    z-index: -1;
+    pointer-events: none;
+}
+
+.step {
+    position: absolute;
+    width: 10vw; /* Пропорциональный размер */
+    height: auto;
+    opacity: 0.7; /* Немного прозрачности */
+}
+
+.step1 { bottom: 15vh; left: 13vw; transform: rotate(130deg); }
+.step2 { bottom: 8vh; left: 17vw; transform: rotate(115deg); }
+.step3 { bottom: 1.5vh; left: 22vw; transform: rotate(135deg); }
+.step4 { bottom: -14vh; left: 32vw; transform: rotate(235deg); }
+.step5 { bottom: -18vh; left: 25vw; transform: rotate(225deg); }
+.step6 { bottom: -38vh; left: 10vw; transform: rotate(220deg); }
+.step7 { bottom: -60vh; left: 2vw; transform: rotate(150deg); }
+.step8 { bottom: -90vh; left: 7vw; transform: rotate(130deg); }
+.step9 { bottom: -98vh; left: 12vw; transform: rotate(140deg); }
+.step10 { bottom: -108vh; left: 13vw; transform: rotate(190deg); }
+.step11 { bottom: -118vh; left: 9vw; transform: rotate(220deg); }
+.step12 { bottom: -125vh; left: 6vw; transform: rotate(220deg); }
+
+@media (max-width: 768px) {
+    .step {
+        width: 8vw; /* Увеличиваем размер шагов на мобильных */
+    }
+
+    .steps-container {
+        height: 150vh; /* Увеличиваем высоту контейнера */
+    }
+    .step1 { bottom: 18vh; left: 15vw; }
+    .step2 { bottom: 10vh; left: 20vw; }
+    .step3 { bottom: 2vh; left: 25vw; }
+    .step4 { bottom: -12vh; left: 35vw; }
+    .step5 { bottom: -16vh; left: 30vw; }
+    .step6 { bottom: -35vh; left: 12vw; }
+    .step7 { bottom: -55vh; left: 5vw; }
+    .step8 { bottom: -85vh; left: 10vw; }
+    .step9 { bottom: -95vh; left: 15vw; }
+    .step10 { bottom: -105vh; left: 16vw; }
+    .step11 { bottom: -115vh; left: 12vw; }
+    .step12 { bottom: -125vh; left: 8vw; }
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Детский сад "Шаги"</title>
+    <link rel="stylesheet" href="./src/css/base.css" />
+    <link rel="stylesheet" href="./src/css/components/navbar.css" />
+    <link rel="stylesheet" href="./src/css/components/buttons.css" />
+    <link rel="icon" href="C:\Users\Виталий\Desktop\garden\src\img\logo-Photoroom.png" type="image/jpeg">
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand :wght@400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <section id="main">
+     <header>
+        <div class="container">
+        <!-- Шапка сайта -->
+         <div class="main-header" >
+         <h1>От 4 до 7 лет</h1>
+        <div class="main-title">
+            <h2>Объявляем набор деток!</h2>
+            <h3>В Детский сад</h3>
+        </div>
+        </div>        
+        <!-- Прикреплённое меню -->
+        <nav class="navbar-container">
+            <a href="#main" class="navbar-logo">Шаги</a>
+            <ul class="navbar-menu">
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#services">Услуги</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        </div>
+    </header>
+    </section>
+
+    <!-- Основной контент -->
+    <main>
+        <section id="about" class="section">
+            <h2 class="welcome">Добро пожаловать в "Шаги"!</h2>
+            <div class="about-grid">
+            <div>
+            <p>Наш детский сад фокусируется на развитии эмоционального интеллекта и социальных навыков детей через игру и творчество.</p>
+            <button class="cta-button" id="signUpButton" ><a href="https://wa.me/79147056103", target="_blank"> Напишите нам в WhatsApp!</a></button>
+            </div>
+            <img class="aboutImg" src="C:\Users\Виталий\Desktop\garden\src\img\aboutImg.jpeg" alt="Ваш браузер не поддерживает данное изображение!:(">
+            </div>
+        </section>
+
+        <!-- Услуги -->
+        <section id="services" class="section">
+            <h2 class="service">Наши услуги:</h2>
+            <div class="service-grid">
+                <div class="study">
+                <img class="study-img" src="C:\Users\Виталий\Desktop\garden\src\img\study.jpeg">
+                <li>Нейропсихологические занятия (мышление, память, внимание)</li>
+                </div>
+                <div class="play">
+                <img class="study-img" src="C:\Users\Виталий\Desktop\garden\src\img\play.jpeg">
+                <li>Развивающие игры и творческие мастер-классы</li>
+                </div>
+                <div class="relax">
+                <img class="study-img" src="C:\Users\Виталий\Desktop\garden\src\img\relax.jpeg">    
+                <li>Комната психологической разгрузки</li>
+                </div>
+                <div class="dinner">
+                <img class="study-img" src="C:\Users\Виталий\Desktop\garden\src\img\dinner.jpeg">    
+                <li>3-разовое питание по меню диетолога</li>
+                </div>
+                <div class="sport">
+                <img class="study-img" src="C:\Users\Виталий\Desktop\garden\src\img\sport.jpeg">
+                <li>Спортивные мероприятия на свежем воздухе</li>
+                </div>
+            </div>
+
+            
+        </section>
+
+        <section id="reviews" class="section">
+            <h4>Отзывы</h4>
+            <div>
+                <input id="userInput" type="text"
+                placeholder="Введите отзыв:">
+                <button class="review-button">Оставить отзыв?</button>
+                <div id="error"></div>
+                <div id="reviews"></div>
+            </div>
+        </section>
+
+        <section id="contacts" class="section">
+            <h4>Свяжитесь с нами</h4>
+            <p><strong>Телефон:</strong> <a href="tel:+79147056103">8-914-705-61-03</a>, Наталья</p>
+            <p><strong>Адрес:</strong> С. Вольно-Надеждинское ул. Красноармейская 31</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Детский сад "Шаги"</p>
+    </footer>
+    </div>
+
+    <script src="./src/js/utils.js" defer></script>
+    <script src="./src/js/main.js" defer></script>     
+</body>
+</html>

@@ -1,0 +1,40 @@
+.review-button {
+  text-decoration: none;
+  margin-top: 25px;
+  background-color: #7B3F00;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.review-button:hover {
+  background-color: #A86B32;
+  transform: scale(1.05);
+}
+
+
+/* Кнопка CTA*/
+.cta-button {
+  text-decoration: none;
+  margin-top: 25px;
+  background-color: #7B3F00;
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+  background-color: #A86B32;
+  transform: scale(1.05);
+}
+
+.cta-button a {
+  text-decoration: none;
+  color: #1D0200;
+}
