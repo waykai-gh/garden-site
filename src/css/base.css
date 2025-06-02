@@ -129,6 +129,12 @@ header {
   }
 }
 
+@media (max-width: 768px) {
+  .aboutImg {
+    height: 300px;
+  }
+}
+
 /* Футер */
 footer {
   background-color: #C4D9D8;
