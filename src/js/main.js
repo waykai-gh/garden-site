@@ -46,4 +46,80 @@ document.addEventListener('scroll', () => {
     }
 });
 
-// отзывы, ДОДЕЛАТЬ И СТИЛИЗОВАТЬ!!! НЕ СОХРАНЯЮТСЯ(ДЕЛАЛ В PERLEXITY)
+// карты... сука
+document.addEventListener('DOMContentLoaded', () => {
+    if (!window.mapKey) {
+        console.error('API-ключ не найден');
+        return;
+    }
+
+    const script = document.createElement('script');
+    script.src = `https://api-maps.yandex.ru/2.1/?apikey=${window.mapKey}&lang=ru_RU`;
+    script.onload = () => {
+        if (typeof ymaps === 'undefined') {
+            console.error('ymaps не определён');
+            return;
+        }
+        ymaps.ready(initMap);
+    };
+    script.onerror = () => {
+        console.error('Не удалось загрузить API Яндекс.Карт');
+    };
+    document.head.appendChild(script);
+});
+
+function initMap() {
+    const gardenCoords = [43.374105, 131.991881]; // Замените на свои координаты
+    const mapElement = document.getElementById('map');
+
+    if (!mapElement) {
+        console.error('Элемент карты не найден');
+        return;
+    }
+
+    try {
+        const map = new ymaps.Map("map", {
+            center: gardenCoords,
+            zoom: 10,
+            controls: []
+        });
+
+        // Метка детского сада
+        const gardenPlacemark = new ymaps.Placemark(
+            gardenCoords,
+            { balloonContent: 'Детский сад "Шаги"' },
+            { preset: 'islands#blueHomeIcon' } 
+        );
+        map.geoObjects.add(gardenPlacemark);
+
+        // Получение местоположения пользователя
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(
+                (position) => {
+                    const userCoords = [
+                        position.coords.latitude,
+                        position.coords.longitude     
+                    ];
+
+                    const userPlacemark = new ymaps.Placemark(
+                        userCoords,
+                        { balloonContent: 'Вы здесь' },
+                        { preset: 'islands#redDotIcon' }
+                    );
+                    map.geoObjects.add(userPlacemark);
+
+                    // Авто-зум на обе точки
+                    const bounds = [userCoords, gardenCoords];
+                    map.setBounds(bounds, { checkZoom: true });
+                },
+                () => {
+                    alert('Не удалось определить ваше местоположение');
+                }
+            );
+        } else {
+            alert('Геолокация не поддерживается вашим браузером');
+        }
+    } catch (error) {
+        console.error('Ошибка инициализации карты:', error);
+    }
+}
