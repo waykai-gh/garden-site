@@ -8,16 +8,17 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #D9BFA3;
+    background-color: #F3E6E9;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
     transition: none;
 }
 
 .navbar-logo {
     font-size: 20px;
-    color: #331a00;
+    color: #B97D5B;
     text-decoration: none;
     font-weight: bold;
+    transition: color 0.3s ease;
 }
 
 .navbar-menu {
@@ -30,13 +31,17 @@
 
 .navbar-menu li a {
     text-decoration: none;
-    color: #331a00;
+    color: #B97D5B;
     font-weight: 500;
     transition: color 0.3s ease;
 }
 
 .navbar-menu li a:hover {
-    color: #4A3C31;
+    color: #C06B5A;
+}
+
+.navbar-logo:hover {
+    color: #C06B5A;
 }
 
 @media (max-width: 768px) {
