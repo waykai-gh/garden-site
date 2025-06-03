@@ -1,4 +1,12 @@
 /* Основные настройки*/
+
+@font-face {
+  font-family: "GoodTime";
+  src: url("../fonts/GoodTimeScript.woff2") format(woff2),
+  url("../fonts/GoodTimeScript.woff") format(woff);
+  font-style: normal;
+  font-weight: normal;
+}
 body {
   font-family: 'Quicksand', sans-serif;
   margin: 0;
@@ -6,6 +14,12 @@ body {
   background-color: #B7D3CF;
   color: #331a00;
   line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px; /* Максимальная ширина */
+    margin: 0 auto; /* Центрируем */
+    padding: 0 20px; /* Отступы слева/справа */
 }
 
 main {
@@ -18,31 +32,50 @@ header {
 
 .main-header {
   text-align: center;
-  background-image: url("../img/steps.png");
+  background-image:
+    linear-gradient(to right top, rgba(122,169,167,0) 60%, #7AA9A7 100%),
+    url("../img/steps.png"),
+    url("../img/headerImg.png");
   background-size: cover;
   background-position: center;
   background-color: #7AA9A7;
+  background-repeat: no-repeat;
   position: relative;
   width: 100%;
   height: 300px;
 }
 
-.main-header h1 {
-  color: #0a0f1a;
+.main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px; /* Расстояние между строками */
+  font-size: 40px;
 }
 
-.main-title h2 {
-  color: #0a0f1a;
-  font-size: 24px;
-  margin: 10px 0;
-  line-height: 1.2;
+.span-text-do {
+  display: block;
+  padding: 10px;
+  padding: 20px 250px 0px 0px;
 }
 
-.main-title h3 {
-  color: #0a0f1a;
-  font-size: 28px;
+.span-text-steps {
+  display: block;
+  font-weight: bold;
+  padding: 10px;
+  padding: 5px 0px 0px 250px;
+  font-family: "GoodTime";
+  font-size: 60px;
 }
 
+@media (max-width: 768px) {
+    .main-text {
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        font-size: 30px;
+    }
+}
 
 #about {
   text-align: left;
@@ -53,12 +86,6 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 15px;
   margin-top: 20px;
-}
-
-.container {
-    max-width: 1200px; /* Максимальная ширина */
-    margin: 0 auto; /* Центрируем */
-    padding: 0 20px; /* Отступы слева/справа */
 }
 
 .service {
@@ -101,40 +128,6 @@ header {
   margin-top: 80px;
 }
 
-/*Карта стиль*/
-
-.map-all h3 {
-  text-align: center;
-}
-
-.map-parent {
-  display: flex;
-  justify-content: center;
-}
-
-.map-container {
-  display: block;
-  width: 900px;
-  height: 400px;
-  margin-top: 20px;
-  border-radius: 15px;
-  overflow: auto;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-
-}
-
-@media (max-width: 768px) {
-  .map-container {
-    height: 300px;
-  }
-}
-
-@media (max-width: 768px) {
-  .aboutImg {
-    height: 300px;
-  }
-}
-
 /* Футер */
 footer {
   background-color: #C4D9D8;
@@ -143,4 +136,12 @@ footer {
   margin-top: 30px;
   font-size: 14px;
   color: #696969;
+}
+
+@media (max-width: 768px) {
+  .aboutImg {
+    max-width: 100%;
+    height: auto;
+    display: block
+  }
 }
